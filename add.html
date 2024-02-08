@@ -6,13 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    <label>Id:</label>
-    <input id="duckId"/>
-    <label>Type:</label>
-    <input id="duckType" />
-    <button onclick="addTheDuck()">Add the duck</button>
+<label>Id:</label>
+<input id="duckId"/>
+<label>Type:</label>
+<input id="duckType" />
+<button onclick="addTheDuck()">Add the duck</button>
 
-    <script>
+<script>
         function addTheDuck() {
            let duckIdNode = document.getElementById("duckId");
            let duckId = duckIdNode.value;
@@ -20,6 +20,10 @@
            let duckType = duckTypeNode.value;
            let duck = {id: duckId, type: duckType}
            alert("You entered: " + JSON.stringify(duck));
+
+
+            let duckImageNode = document.getElementById("duckImage");
+            alert("The image:"+ duckImageNode.files[0].name + ", size = "+ duckImageNode.files[0].size);
         }
     </script>
 
